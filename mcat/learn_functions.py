@@ -117,8 +117,8 @@ def train_and_test( model: torch.nn.Module,
         print(
             f"Epoch: {epoch+1} | "
             f"train_loss: {train_loss:.4f} | "
-            f"test_loss: {test_loss:.4f} "
-            f"train_acc: {train_acc:.2f} "
+            f"test_loss: {test_loss:.4f} | "
+            f"train_acc: {train_acc:.2f} | "
             f"test_acc: {test_acc:.2f} "
         )
         # Check if it`s the best result of the model - then save the state dict
