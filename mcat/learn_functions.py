@@ -6,7 +6,7 @@ from timeit import default_timer
 from tqdm.auto import tqdm
 import copy
 
-import evaluation
+from mcat import  evaluation
 
 
 ### training function ###
@@ -77,8 +77,9 @@ def train_and_test( model: torch.nn.Module,
                     optimizer: torch.optim.Optimizer,
                     loss_fn: torch.nn.Module,
                     epochs: int,
-                    acc_fn: Callable,
-                    device: torch.device):
+                    device: torch.device,
+                    acc_fn: Callable = evaluation.calculates_accuracy,
+                    ):
     """
     Train and test the model by given model and data
     returns:
